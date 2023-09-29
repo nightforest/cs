@@ -1,0 +1,91 @@
+.top-section
+    position: relative
+    padding: 145px 0 160px
+    overflow: hidden
+    z-index: $z-index-0
+    
+    @media ($max-md)
+        padding: 45px 0
+
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        z-index: $z-index-minus
+
+        &:after
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: linear-gradient(to bottom, transparent, #011A3D)
+            content: ""
+
+        &-img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__title
+        margin: 0 0 20px
+        font-size: 55px
+        text-transform: uppercase
+        font-weight: 800
+        line-height: 1.35
+        color: var(--white)
+
+        @media ($max-md)
+            font-size: 20px
+            margin-bottom: 2px
+
+        span
+            display: block
+            font-size: 125px
+            -webkit-text-stroke: 5px #fff
+            color: transparent
+
+            @media ($max-md)
+                font-size: 40px
+                -webkit-text-stroke: 2px #fff
+    
+    &__sub-title
+        position: absolute
+        right: 10%
+        bottom: 170px
+        margin: 0
+        max-width: 600px
+        font-size: 55px
+        text-transform: uppercase
+        font-weight: 800
+        line-height: 1.25
+        color: var(--white)
+
+        @media (max-width: 1499.98px)
+            font-size: 35px
+            max-width: 400px
+            bottom: 150px
+
+        @media ($max-md)
+            position: relative
+            bottom: auto
+            right: auto
+            font-size: 25px
+            margin-bottom: 25px
+    
+    &__buttons
+        display: flex
+        gap: 25px
+        margin-bottom: 60px
+
+        @media ($max-md)
+            margin-bottom: 35px
+
+    &__button
+
+        @media ($max-md)
+            width: 100%
+            min-width: 0

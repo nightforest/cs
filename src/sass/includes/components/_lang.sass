@@ -1,0 +1,105 @@
+.lang
+    position: relative
+    width: 78px
+    height: 60px
+    min-width: 78px
+
+    &__inner
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 60px
+        overflow: hidden
+        border: 1px solid var(--blue)
+        background: var(--white)
+        border-radius: 10px
+        transition: all .5s ease
+        z-index: $z-index-1
+
+    &.is-active
+
+        .lang__inner
+            height: 105px
+
+        .lang__toggle-icon
+            transform: rotateX(180deg)
+
+    &__toggle
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        gap: 12px
+        font-size: 18px
+        font-weight: 500
+        height: 58px
+        min-height: 58px
+        width: 100%
+        transition: color .5s ease
+
+        &-icon
+            color: var(--blue)
+            transition: transform .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--blue)
+
+    &__dropdown
+        margin: 0
+        padding: 0 0 10px
+        list-style: none
+    
+    &__link
+        display: block
+        padding: 5px 12px
+        font-weight: 500
+        font-size: 18px
+        color: var(--black)
+        transition: color .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--blue)
+
+    &--lg-small
+
+        @media ($max-lg)
+            width: 40px
+            height: 40px
+            min-width: 40px
+
+        &.is-active
+
+            .lang__inner
+
+                @media ($max-lg)
+                    height: 70px
+
+        .lang__inner
+            
+            @media ($max-lg)
+                height: 40px
+
+        .lang__toggle
+
+            @media ($max-lg)
+                gap: 2px
+                font-size: 14px
+                height: 38px
+                min-height: 38px
+
+        .lang__toggle-icon
+
+            @media ($max-lg)
+                width: 8px
+                height: 5px
+        
+        .lang__link
+
+            @media ($max-lg)
+                font-size: 14px
+                padding: 2px 4px 10px

@@ -1,0 +1,93 @@
+.checkbox
+    padding: 0
+    margin: 0
+    line-height: 1
+
+    &__label
+        position: relative
+        display: block
+        font-size: 14px
+        line-height: 1.3
+        font-weight: 500
+        color: var(--black)
+        margin: 0
+        padding-left: 28px
+        cursor: pointer
+        user-select: none
+        transition: all .5s ease
+
+        &::before
+            position: absolute
+            top: 0
+            left: 0
+            width: 18px
+            height: 18px
+            border: 1px solid var(--black)
+            background: none
+            border-radius: 50%
+            transition: all .5s ease
+            content: ""
+        
+        &::after
+            position: absolute
+            top: 4px
+            left: 4px
+            width: 10px
+            height: 10px
+            background: var(--black)
+            border-radius: 50%
+            transition: all .25s ease
+            content: ""
+
+        &:hover,
+        &:active
+            color: var(--brown)
+
+    &__input
+        position: absolute
+        opacity: 0
+        z-index: -1
+
+        // Checked
+        &:checked + .checkbox__label::before
+            background: none
+
+        &:checked + .checkbox__label::after
+            opacity: 1
+            transform: scale(1)
+
+        // Not Checked
+        &:not(:checked) + .checkbox__label::after
+            opacity: 0
+            transform: scale(0)
+
+        // Hover
+        &:not(:disabled):not(:checked) + .checkbox__label:hover::before
+            border-color: var(--brown)
+
+        // Active 
+        &:not(:disabled):active + .checkbox__label::before
+            border-color: var(--brown)
+
+        // Focus 
+        &:focus-visible + .checkbox__label::before
+            border-color: var(--brown)
+
+        &:focus-visible:not(:checked) + .checkbox__label::before
+            border-color: var(--brown)
+        
+        // Disabled
+        &:disabled
+
+            &:not(:checked) + .checkbox__label::before
+                box-shadow: none
+                border-color: var(--grey-disabled)
+
+            &:checked + .checkbox__label
+                &::before
+                    box-shadow: none
+                    border-color: var(--grey-disabled)
+                    background: var(--grey-disabled)
+
+            + .checkbox__label
+                color: var(--grey-disabled)

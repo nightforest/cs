@@ -1,0 +1,93 @@
+.radio
+    padding: 0
+    margin: 0
+    line-height: 1
+
+    &__label
+        position: relative
+        display: flex
+        align-items: center
+        text-align: left
+        font-size: 16px
+        line-height: 24px
+        font-weight: 300
+        color: var(--black)
+        margin: 0
+        padding-left: 35px
+        cursor: pointer
+        user-select: none
+        transition: all .5s ease
+
+        &::before
+            position: absolute
+            top: calc(50% - 12px)
+            left: 0
+            width: 24px
+            height: 24px
+            border: 1px solid #E8E8E8
+            border-radius: 50%
+            transition: all .2s ease
+            content: ""
+        
+        &::after
+            position: absolute
+            top: calc(50% - 7px)
+            left: 5px
+            width: 14px
+            height: 14px
+            background: var(--purple-gradient)
+            border-radius: 50%
+            transition: all .2s ease
+            content: ""
+
+        &:hover,
+        &:active
+            color: var(--purple)
+
+    &__input
+        position: absolute
+        opacity: 0
+        z-index: -1
+
+        // Checked
+        &:checked + .radio__label::before
+            border-color: #E8E8E8
+
+        &:checked + .radio__label::after
+            opacity: 1
+            transform: scale(1)
+
+        // Not Checked
+        &:not(:checked) + .radio__label::after
+            opacity: 0
+            transform: scale(0)
+
+        // Hover
+        &:not(:disabled):not(:checked) + .radio__label:hover::before
+            // border-color: var(--orange)
+
+        // Active 
+        &:not(:disabled):active + .radio__label::before
+            border-color: var(--purple)
+
+        // Focus 
+        &:focus-visible + .radio__label::before
+            border-color: var(--purple)
+
+        &:focus-visible:not(:checked) + .radio__label::before
+            border-color: var(--purple)
+        
+        // Disabled
+        &:disabled
+            &:not(:checked) + .radio__label::before
+                box-shadow: none
+                border-color: #999
+
+            &:checked + .radio__label
+                &::before
+                    box-shadow: none
+                    border-color: #999
+                    background: #999
+
+            + .radio__label
+                color: #999

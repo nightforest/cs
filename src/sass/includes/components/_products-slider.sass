@@ -1,0 +1,38 @@
+.products-slider
+    position: relative
+
+    &__swiper
+
+        @media ($max-md)
+            padding-bottom: 23px
+
+    &__prev
+        position: absolute
+        top: 50%
+        transform: translateY(-50%) rotate(180deg)
+        left: -70px
+
+        @media ($max-md)
+            display: none
+
+    &__next
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: -70px
+
+        @media ($max-md)
+            display: none
+
+    &__picture
+        display: flex
+        width: 100%
+        height: 100%
+    
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    &__scrollbar
+        --swiper-scrollbar-bg-color: #F3F3F3

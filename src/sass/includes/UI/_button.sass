@@ -1,0 +1,58 @@
+.button
+    position: relative
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    box-sizing: border-box
+    -webkit-tap-highlight-color: transparent
+    outline: none
+    border: 1px solid var(--blue)
+    margin: 0
+    cursor: pointer
+    user-select: none
+    vertical-align: middle
+    appearance: none
+    text-decoration: none
+    font-size: 18px
+    font-weight: 500
+    line-height: 1
+    letter-spacing: 0
+    text-align: center
+    height: 60px
+    min-width: 260px
+    padding: 5px 15px
+    border-radius: 10px
+    color: var(--white)
+    background: var(--blue)
+    box-shadow: none
+    transition: all .5s ease
+
+    @media ($max-md)
+        font-size: 16px
+
+    &:hover,
+    &:active,
+    &:focus-visible
+        outline: none
+        color: var(--white)
+        background: #065DDA
+        border-color: #065DDA
+
+    &:disabled
+        background: var(--grey-disabled) !important
+        border-color: var(--grey-disabled) !important
+        color: var(--grey) !important
+        cursor: not-allowed
+
+    &--outline
+        background: transparent
+        color: var(--white)
+        border-color: var(--white)
+        z-index: 0
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--blue)
+            background: var(--white)
+            border-color: var(--white)

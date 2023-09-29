@@ -1,0 +1,64 @@
+.actions
+
+    &__list
+        display: flex
+        align-items: center
+        gap: 10px
+        margin: 0
+        padding: 0
+        list-style: none
+
+    &__item
+
+        &.is-active
+
+            .actions__button
+                background: var(--blue)
+                color: var(--white)
+
+    &__button
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 40px
+        height: 40px
+        border: 1px solid var(--blue)
+        color: var(--blue)
+        border-radius: 10px
+        transition: all .5s ease
+    
+    &__dropdown
+        position: absolute
+        top: 100%
+        left: 0
+        width: 100%
+        background: var(--white)
+        padding: 10px 15px
+        opacity: 0
+        visibility: hidden
+        transform: translateY(-10px)
+        transition: all .25s ease
+        z-index: $z-index-minus
+
+        &.is-visible
+            opacity: 1
+            visibility: visible
+            transform: translateY(0)
+
+    &__title
+        margin: 0
+        font-size: 16px
+        font-weight: 400
+        color: #525252
+
+    &__link
+        display: flex
+        font-size: 18px
+        font-weight: 800
+        font-style: normal
+        color: var(--blue)
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--blue)

@@ -1,0 +1,369 @@
+.modal-wrap
+    #modal-lesson.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="33" height="33")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                h3.modal__title Пробний урок
+                p.modal__descr Заповніть усі необхідні поля та ми з вами зв’яжемося
+
+                form.form.form--black.modal__form(id="form" autocomplete="off" novalidate="novalidate")
+                    .form__group
+                        input#inputName.input.form__input(type="text" name="inputFirstName" placeholder="" autocomplete="off" required)
+                        label.form__placeholder Ім'я
+                    
+                    .form__group
+                        input#inputPhone.input.form__input.tell-input(type="text" name="inputPhone" placeholder="" autocomplete="off" required)
+
+                    .form__group
+                        textarea#textarea.textarea.form__input(name="message" rows="3" autocomplete="off" required)
+                        label.form__placeholder Ваше повідомлення
+
+                    .form__button-group.form__button-group--center
+                        button.button.form__button Надіслати
+
+    #modal-consult.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="33" height="33")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                h3.modal__title Консультація менеджера
+                p.modal__descr Заповніть усі необхідні поля та ми з вами зв’яжемося
+
+                form.form.form--black.modal__form(id="form" autocomplete="off" novalidate="novalidate")
+                    .form__group
+                        input#inputName.input.form__input(type="text" name="inputFirstName" placeholder="" autocomplete="off" required)
+                        label.form__placeholder Ім'я
+                    
+                    .form__group
+                        input#inputPhone.input.form__input.tell-input(type="text" name="inputPhone" placeholder="" autocomplete="off" required)
+
+                    .form__button-group.form__button-group--center
+                        button.button.form__button Надіслати
+
+    #modal-team-1.modal.team-modal
+        .modal__inner
+            .modal__window.team-modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="33" height="33")
+                        use(xlink:href="img/sprite.svg#close-modal")
+                
+                picture.team-modal__picture
+                    img.team-modal__img(src="img/team/team-img-1.webp" srcset="img/team/team-img-1@2x.webp 2x" loading="lazy" width="315" height="279"  alt="alt")
+
+                .team-modal__content
+                    h2.team-modal__name Леся Соломка
+                    .team-modal__descr засновниця та лідер проєкту
+                    ul.check-list.team-modal__list
+                        li викладає англійську 22 роки
+                        li 7 років керує школою AplusB
+                        li навчила англійської більше 500 учнів
+                    p Освіта - педагог англійської, сертифікат CELTA
+                    p
+                        strong Мета - розвивати знання англійської серед українців. Це надасть необхідні знання, ресурси та підтримку, які зараз так важливі кожному з нас.
+
+    #modal-thanks.modal.thanks-modal
+        .modal__inner
+            .modal__window.thanks-modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="33" height="33")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                h3.modal__title.thanks-modal__title Дякуємо за заявку
+                p.modal__descr.thanks-modal__descr Наш менеджер зв’яжеться з вами найближчим часом
+                button.button.thanks-modal__button(type="button") до сторінки
+    
+    #modal-schedule.modal.schedule-modal
+        .modal__inner
+            .modal__window.schedule-modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="33" height="33")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                h3.modal__title.schedule-modal__title Розклад груп
+
+                .schedule
+                    .schedule-select
+                        button.schedule-select__toggle(type="button" aria-label="Choose Page")
+                            span Starter ONLINE
+                            svg.schedule-select__toggle-icon(width="10" height="7")
+                                use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                        ul.schedule-select__dropdown
+                            li.schedule-select__item
+                                a.schedule-select__link(href="schedule-1") Starter ONLINE
+                            li.schedule-select__item
+                                a.schedule-select__link(href="schedule-2") Pre-Intermediate ONLINE
+                            li.schedule-select__item
+                                a.schedule-select__link(href="schedule-3") Upper-Intermediate
+                            li.schedule-select__item
+                                a.schedule-select__link(href="schedule-4") Intermediate Plus ONLINE
+                            li.schedule-select__item
+                                a.schedule-select__link(href="schedule-5") Advanced ONLINE
+                            li.schedule-select__item
+                                a.schedule-select__link(href="schedule-6") Advanced Plus ONLINE
+                            li.schedule-select__item
+                                a.schedule-select__link(href="schedule-7") Proficiency ONLINE
+                    
+                    ul.schedule-list
+                        li#schedule-1.schedule-list__item.is-visible
+                            h3.schedule-list__title Рівень
+                            .schedule-list__text
+                                p Starter ONLINE
+                            
+                            h3.schedule-list__title Початок курсу
+                            .schedule-list__text
+                                p йде набір
+                            
+                            h3.schedule-list__title Графік занять
+                            .schedule-list__text
+                                p ЧТ 19:00-20:00
+                                p СБ 11:00-12:30
+                            
+                            h3.schedule-list__title Тривалість курсу
+                            .schedule-list__text
+                                p 48 занять по 90 хв, 5 місяців
+                            
+                            h3.schedule-list__title Вартість навчання за місяць
+                            .schedule-list__text
+                                p 2 352 грн
+                            
+                            h3.schedule-list__title Вартість курсу, з урахуванням знижки (10%)*
+                            .schedule-list__text
+                                p 12 700 грн
+                        
+                        li#schedule-2.schedule-list__item
+                            h3.schedule-list__title Рівень
+                            .schedule-list__text
+                                p Pre-Intermediate ONLINE
+                            
+                            h3.schedule-list__title Початок курсу
+                            .schedule-list__text
+                                p йде набір
+                            
+                            h3.schedule-list__title Графік занять
+                            .schedule-list__text
+                                p ЧТ 19:00-20:00
+                                p СБ 11:00-12:30
+                            
+                            h3.schedule-list__title Тривалість курсу
+                            .schedule-list__text
+                                p 48 занять по 90 хв, 5 місяців
+                            
+                            h3.schedule-list__title Вартість навчання за місяць
+                            .schedule-list__text
+                                p 2 352 грн
+                            
+                            h3.schedule-list__title Вартість курсу, з урахуванням знижки (10%)*
+                            .schedule-list__text
+                                p 12 700 грн
+                        
+                        li#schedule-3.schedule-list__item
+                            h3.schedule-list__title Рівень
+                            .schedule-list__text
+                                p Upper-Intermediate
+                            
+                            h3.schedule-list__title Початок курсу
+                            .schedule-list__text
+                                p йде набір
+                            
+                            h3.schedule-list__title Графік занять
+                            .schedule-list__text
+                                p ЧТ 19:00-20:00
+                                p СБ 11:00-12:30
+                            
+                            h3.schedule-list__title Тривалість курсу
+                            .schedule-list__text
+                                p 48 занять по 90 хв, 5 місяців
+                            
+                            h3.schedule-list__title Вартість навчання за місяць
+                            .schedule-list__text
+                                p 2 352 грн
+                            
+                            h3.schedule-list__title Вартість курсу, з урахуванням знижки (10%)*
+                            .schedule-list__text
+                                p 12 700 грн
+                        
+                        li#schedule-4.schedule-list__item
+                            h3.schedule-list__title Рівень
+                            .schedule-list__text
+                                p Intermediate Plus ONLINE
+                            
+                            h3.schedule-list__title Початок курсу
+                            .schedule-list__text
+                                p йде набір
+                            
+                            h3.schedule-list__title Графік занять
+                            .schedule-list__text
+                                p ЧТ 19:00-20:00
+                                p СБ 11:00-12:30
+                            
+                            h3.schedule-list__title Тривалість курсу
+                            .schedule-list__text
+                                p 48 занять по 90 хв, 5 місяців
+                            
+                            h3.schedule-list__title Вартість навчання за місяць
+                            .schedule-list__text
+                                p 2 352 грн
+                            
+                            h3.schedule-list__title Вартість курсу, з урахуванням знижки (10%)*
+                            .schedule-list__text
+                                p 12 700 грн
+                        
+                        li#schedule-5.schedule-list__item
+                            h3.schedule-list__title Рівень
+                            .schedule-list__text
+                                p Advanced ONLINE
+                            
+                            h3.schedule-list__title Початок курсу
+                            .schedule-list__text
+                                p йде набір
+                            
+                            h3.schedule-list__title Графік занять
+                            .schedule-list__text
+                                p ЧТ 19:00-20:00
+                                p СБ 11:00-12:30
+                            
+                            h3.schedule-list__title Тривалість курсу
+                            .schedule-list__text
+                                p 48 занять по 90 хв, 5 місяців
+                            
+                            h3.schedule-list__title Вартість навчання за місяць
+                            .schedule-list__text
+                                p 2 352 грн
+                            
+                            h3.schedule-list__title Вартість курсу, з урахуванням знижки (10%)*
+                            .schedule-list__text
+                                p 12 700 грн
+                        
+                        li#schedule-6.schedule-list__item
+                            h3.schedule-list__title Рівень
+                            .schedule-list__text
+                                p Advanced Plus ONLINE
+                            
+                            h3.schedule-list__title Початок курсу
+                            .schedule-list__text
+                                p йде набір
+                            
+                            h3.schedule-list__title Графік занять
+                            .schedule-list__text
+                                p ЧТ 19:00-20:00
+                                p СБ 11:00-12:30
+                            
+                            h3.schedule-list__title Тривалість курсу
+                            .schedule-list__text
+                                p 48 занять по 90 хв, 5 місяців
+                            
+                            h3.schedule-list__title Вартість навчання за місяць
+                            .schedule-list__text
+                                p 2 352 грн
+                            
+                            h3.schedule-list__title Вартість курсу, з урахуванням знижки (10%)*
+                            .schedule-list__text
+                                p 12 700 грн
+                        
+                        li#schedule-7.schedule-list__item
+                            h3.schedule-list__title Рівень
+                            .schedule-list__text
+                                p Proficiency ONLINE
+                            
+                            h3.schedule-list__title Початок курсу
+                            .schedule-list__text
+                                p йде набір
+                            
+                            h3.schedule-list__title Графік занять
+                            .schedule-list__text
+                                p ЧТ 19:00-20:00
+                                p СБ 11:00-12:30
+                            
+                            h3.schedule-list__title Тривалість курсу
+                            .schedule-list__text
+                                p 48 занять по 90 хв, 5 місяців
+                            
+                            h3.schedule-list__title Вартість навчання за місяць
+                            .schedule-list__text
+                                p 2 352 грн
+                            
+                            h3.schedule-list__title Вартість курсу, з урахуванням знижки (10%)*
+                            .schedule-list__text
+                                p 12 700 грн
+
+
+                table.table.schedule-modal__table
+                    thead
+                        tr
+                            th Рівень
+                            th Початок курсу
+                            th Графік занять
+                            th Тривалість курсу
+                            th Вартість навчання за місяць
+                            th Вартість курсу, з урахуванням знижки (10%)*
+                    
+                    tbody
+                        tr
+                            td Starter ONLINE
+                            td йде набір
+                            td ЧТ 19:00-20:00
+                                br
+                                | СБ 11:00-12:30
+                            td 48 занять по 90 хв, 5 місяців
+                            td 2 352 грн
+                            td 12 700 грн
+                        tr
+                            td Pre-Intermediate ONLINE
+                            td йде набір
+                            td ЧТ 19:00-20:00
+                                br
+                                | СБ 11:00-12:30
+                            td 48 занять по 90 хв, 5 місяців
+                            td 2 352 грн
+                            td 12 700 грн
+                        tr
+                            td Upper-Intermediate
+                            td йде набір
+                            td ЧТ 19:00-20:00
+                                br
+                                | СБ 11:00-12:30
+                            td 48 занять по 90 хв, 5 місяців
+                            td 2 352 грн
+                            td 12 700 грн
+                        tr
+                            td Intermediate Plus ONLINE
+                            td йде набір
+                            td ЧТ 19:00-20:00
+                                br
+                                | СБ 11:00-12:30
+                            td 48 занять по 90 хв, 5 місяців
+                            td 2 352 грн
+                            td 12 700 грн
+                        tr
+                            td Advanced ONLINE
+                            td йде набір
+                            td ЧТ 19:00-20:00
+                                br
+                                | СБ 11:00-12:30
+                            td 48 занять по 90 хв, 5 місяців
+                            td 2 352 грн
+                            td 12 700 грн
+                        tr
+                            td Advanced Plus ONLINE
+                            td йде набір
+                            td ЧТ 19:00-20:00
+                                br
+                                | СБ 11:00-12:30
+                            td 48 занять по 90 хв, 5 місяців
+                            td 2 352 грн
+                            td 12 700 грн
+                        tr
+                            td Proficiency ONLINE
+                            td йде набір
+                            td ЧТ 19:00-20:00
+                                br
+                                | СБ 11:00-12:30
+                            td 48 занять по 90 хв, 5 місяців
+                            td 2 352 грн
+                            td 12 700 грн

@@ -1,0 +1,19 @@
+section.top-section
+    picture.top-section__bg
+        source(srcset="img/top-bg-mob@2x.webp 2x, img/top-bg-mob.webp" width="320" height="397" media="(max-width: 767.98px)")
+        img.top-section__bg-img(src="img/top-bg.webp" srcset="img/top-bg@2x.webp 2x" loading="lazy" width="1920" height="748"  alt="alt")
+        
+    .container.top-section__container
+        h1.top-section__title Your Engineer 
+            span in façade
+        h2.top-section__sub-title & metal and steel constructions
+
+        .top-section__buttons
+            a.button.top-section__button(href="#") Service
+            a.button.button--outline.top-section__button(href="#") Reference projects
+
+        a.arrow-button.top-section__more(href="#")
+            .arrow-button__pic
+                svg.arrow-button__icon(width="16" height="17")
+                    use(xlink:href="img/sprite.svg#arrow-down")
+            | See more

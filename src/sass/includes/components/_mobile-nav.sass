@@ -1,0 +1,116 @@
+.mobile-nav
+    position: fixed
+    top: 0
+    left: 0
+    z-index: $z-index-2
+    width: 100%
+    height: calc(var(--vh) * 100)
+    outline: 0
+    background: rgba(0, 0, 0, .25)
+    opacity: 0
+    visibility: hidden
+    transition: all .5s ease
+
+    &.is-visible
+        opacity: 1
+        visibility: visible
+
+        .mobile-nav__sidebar
+            visibility: visible
+            transform: translate3d(0, 0, 0)
+
+    &__sidebar
+        position: fixed
+        top: 0
+        right: 0
+        width: 100%
+        max-width: 100%
+        height: 100%
+        background: var(--blue)
+        visibility: hidden
+        transform: translate3d(100%, 0, 0)
+        transition: all .5s ease
+
+    &__inner
+        display: flex
+        flex-direction: column
+        // align-items: center
+        // justify-content: center
+        height: 100%
+        width: 100%
+        padding: 200px 20px 20px
+        overflow-y: auto
+
+        @media ($max-md)
+            padding-top: 150px
+
+    &-menu
+        margin-bottom: 30px
+
+        &__list
+            margin: 0
+            padding: 0
+            list-style: none
+        
+        &__item
+            position: relative
+            text-align: center
+
+            &:not(:last-child)
+                margin-bottom: 50px
+
+            &.is-active
+
+                .mobile-nav-menu__arrow
+                    transform: rotateX(180deg)
+                
+                .mobile-nav-menu__sub
+                    display: block
+
+        &__link
+            position: relative
+            display: inline-flex
+            align-items: center
+            gap: 8px
+            font-size: 16px
+            font-weight: 500
+            line-height: 1.2
+            color: var(--white)
+            transition: color .5s ease
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                color: var(--white)
+
+            &.is-active
+                color: var(--red)
+
+        &__arrow
+            transition: transform .5s ease
+
+        &__sub
+            list-style: none
+            margin: 0
+            padding: 30px 0 0
+            display: none
+
+            &-item
+
+                &:not(:last-child)
+                    margin-bottom: 15px
+
+            &-link
+                display: inline-flex
+                align-items: center
+                gap: 5px
+                font-size: 14px
+                font-weight: 400
+                line-height: 1.2
+                color: var(--white)
+                transition: color .5s ease
+
+                &:hover,
+                &:active,
+                &:focus-visible
+                    color: var(--white)

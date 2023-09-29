@@ -1,0 +1,26 @@
+.mobile-nav
+    .mobile-nav__sidebar
+        .mobile-nav__inner    
+            nav.mobile-nav-menu
+                ul.mobile-nav-menu__list
+                    li.mobile-nav-menu__item
+                        a.mobile-nav-menu__link(href="#") Start Page
+                        
+                    li.mobile-nav-menu__item.is-dropdown
+                        a.mobile-nav-menu__link.is-dropdown__toggle(href="#") Service
+                            svg.mobile-nav-menu__arrow(width="10" height="7")
+                                use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                        ul.mobile-nav-menu__sub.is-dropdown__menu
+                            li.mobile-nav-menu__sub-item
+                                a.mobile-nav-menu__sub-link(href="#") Service 1
+                            li.mobile-nav-menu__sub-item
+                                a.mobile-nav-menu__sub-link(href="#") Service 2
+                            li.mobile-nav-menu__sub-item
+                                a.mobile-nav-menu__sub-link(href="#") Service 3
+
+                    li.mobile-nav-menu__item
+                        a.mobile-nav-menu__link(href="#") Reference projects
+
+                    li.mobile-nav-menu__item
+                        a.mobile-nav-menu__link(href="#") Contact

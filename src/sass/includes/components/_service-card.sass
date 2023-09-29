@@ -1,0 +1,66 @@
+.service-card
+    position: relative
+    border-radius: 10px
+    overflow: hidden
+    height: 454px
+
+    @media ($max-lg)
+        height: 350px
+
+    @media ($max-md)
+        height: 200px
+
+    &__picture
+        position: relative
+        display: flex
+        width: 100%
+        height: 100%
+
+        &:before
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: linear-gradient(0, #00419E 0%, rgba(0, 65, 158, 0) 100%)
+            content: ""
+
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    &__content
+        position: absolute
+        bottom: 0
+        left: 0
+        padding: 30px 40px
+
+        @media ($max-lg)
+            padding: 27px 20px
+
+    &__title
+        margin: 0 0 15px
+        font-size: 35px
+        line-height: 1.25
+        color: var(--white)
+        text-transform: uppercase
+        font-weight: 800
+
+        @media ($max-xl)
+            font-size: 30px
+
+        @media ($max-lg)
+            font-size: 25px
+
+        @media ($max-md)
+            font-size: 20px
+            margin-bottom: 6px
+
+        span
+            display: block
+            -webkit-text-stroke: 2px #fff
+            color: transparent
+
+            @media ($max-lg)
+                -webkit-text-stroke: 1px #fff

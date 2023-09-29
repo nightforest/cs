@@ -1,0 +1,34 @@
+footer.footer
+    .footer__container
+        .logo.footer__logo
+            a.logo__link(href="#" aria-label="logo")
+                img.logo__img(src="img/logo.svg" width="264" height="35" alt="logo")
+
+        .footer__copyright 2023 &copy; CS Constructions GmbH
+
+        .footer__dev Development 
+            a.footer__dev-link(href="https://shafem.com/" target="_blank")
+                img.footer__dev-img(src="img/shafem.svg" width="109" height="24" alt="shafem logo")
+
+        address.contacts.footer__contacts
+            ul.contacts__list
+                li.contacts__item
+                    a.contacts__link(href="tel:+41767478840") +41 76 747 88 40
+                
+                li.contacts__item
+                    a.contacts__link(href="mailto:tech@cs-constructions.ch") tech@cs-constructions.ch
+        
+        .footer__buttons
+            .lang.footer__lang
+                .lang__inner
+                    button.lang__toggle(type="button" aria-label="Choose language") EN
+                        svg.lang__toggle-icon(width="16" height="17")
+                            use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                    ul.lang__dropdown
+                        li.lang__item
+                            a.lang__link(href="#") DE
+
+            a.up-button.footer__up-button(href="#main" data-scroll)
+                svg.up-button__icon(width="16" height="17")
+                    use(xlink:href="img/sprite.svg#arrow-up")

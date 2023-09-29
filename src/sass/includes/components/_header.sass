@@ -1,0 +1,51 @@
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: var(--white)
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .05)
+    z-index: $z-index-3
+    
+    &__container
+        display: flex
+        align-items: center
+        gap: 25px
+        padding: 28px 30px
+
+        @media ($max-md)
+            gap: 10px
+            padding: 7px 15px
+
+    &__logo
+
+        @media ($max-xl)
+            max-width: 230px
+
+        @media ($max-md)
+            margin-right: auto
+            max-width: 200px
+    
+    &__actions
+        display: none
+
+        @media ($max-md)
+            display: block
+
+    &__menu
+        margin: 0 auto
+
+        @media ($max-md)
+            display: none
+
+    &__burger
+        display: none
+        margin-right: -15px
+
+        @media ($max-md)
+            display: flex
+
+    &__contacts
+
+        @media ($max-xl)
+            display: none

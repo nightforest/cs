@@ -1,0 +1,15 @@
+.projects-slider
+    overflow: visible
+    padding-bottom: 33px
+
+    @media ($max-md)
+        padding-bottom: 23px
+        margin-bottom: 15px
+
+    &__slide
+        transition: opacity .5s ease
+        opacity: .5
+
+        &.swiper-slide-next,
+        &.swiper-slide-active
+            opacity: 1

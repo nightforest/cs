@@ -1,0 +1,133 @@
+.form
+
+    &__row
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 30px
+        margin-bottom: 15px
+
+        @media ($max-md)
+            display: block
+
+    &__group
+        position: relative
+        margin-bottom: 20px
+
+        &--4
+            grid-column: 4 span
+            margin-bottom: 0
+
+            @media ($max-md)
+                margin-bottom: 15px
+
+        &--6
+            grid-column: 6 span
+            margin-bottom: 0
+
+            @media ($max-md)
+                margin-bottom: 15px
+
+        &--mb-30
+            margin-bottom: 30px
+        
+        &.has-error
+
+            .form__input
+                border-color: var(--red)
+
+    &__placeholder
+        position: absolute
+        top: 14px
+        left: 0
+        color: #979797
+        font-size: 16px
+        line-height: 1.2
+        margin: 0
+        font-weight: 300
+        transition: transform 200ms cubic-bezier(0, 0, .2, 1) 0ms
+        transform: translate(0, 0)
+        display: block
+        transform-origin: top left
+        z-index: $z-index-1
+
+        &.is-active
+            transform: translate(0, -20px) scale(.85)
+
+    &__input
+
+        &.just-validate-error-field
+            border-color: var(--red)
+
+    &__agree
+        font-size: 15px
+        font-weight: 700
+        color: var(--white)
+        line-height: 1.4
+        margin: 0
+
+        @media ($max-md)
+            text-align: center
+            font-size: 14px
+
+        a
+            color: var(--white)
+            border-bottom: 1px solid var(--white)
+            transition: all .5s ease
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                color: var(--blue-hover)
+                border-color: transparent
+
+    &__button-group
+
+        @media ($max-md)
+            text-align: center
+
+        &--center
+            text-align: center
+    
+    &__radio
+        margin-bottom: 10px
+
+    .just-validate-error-label
+        display: none
+
+    &--black
+
+        .form__placeholder
+            color: var(--black)
+
+        .form__input
+            border-color: #E1E0E0
+            color: var(--black)
+
+            &:hover,
+            &:focus
+                border-color: var(--purple)
+
+            &.just-validate-error-field
+                border-color: var(--red)
+
+        .form__agree
+            color: var(--black)
+
+            a
+                color: var(--black)
+                border-bottom: 1px solid var(--black)
+
+                &:hover,
+                &:active,
+                &:focus-visible
+                    color: var(--blue)
+                    border-color: transparent
+
+        .iti--separate-dial-code .iti__selected-flag
+            color: var(--black)
+        
+        .iti__arrow
+            border-top-color: var(--black)
+
+            &--up
+                border-bottom-color: var(--black)

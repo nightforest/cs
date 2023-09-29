@@ -1,0 +1,44 @@
+.detail-card
+    position: relative
+    border: 1px solid rgba(255, 255, 255, .3)
+    border-radius: 10px
+    padding: 15px 18px 20px
+    color: var(--white)
+    height: 100%
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, .1), transparent)
+    min-height: 185px
+
+    @media ($max-md)
+        min-height: 150px
+
+    &:before
+        position: absolute
+        bottom: 12px
+        right: 12px
+        width: 36px
+        height: 36px
+        border-right: 1px solid var(--white)
+        border-bottom: 1px solid var(--white)
+        content: ""
+
+    &__number
+        font-size: 35px
+        font-weight: 800
+        -webkit-text-stroke: 1px #fff
+        color: transparent
+
+    &__title
+        margin: 0
+        font-size: 20px
+        font-weight: 500
+        line-height: 1.25
+        text-transform: uppercase
+
+        @media ($max-xl)
+            font-size: 18px
+
+    &__text
+        margin: 0
+        font-size: 14px
+        font-weight: 500
+        line-height: 1.3

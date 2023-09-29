@@ -1,0 +1,116 @@
+.product-section
+    padding: 105px 0 90px
+    overflow: hidden
+
+    @media ($max-md)
+        padding: 25px 0 30px
+
+    &__container
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 45px 30px
+
+        @media ($max-md)
+            display: flex
+            flex-direction: column
+            gap: 20px
+    
+    &__col
+        grid-column: 6 span
+
+        &:nth-child(1)
+
+            @media ($max-md)
+                order: 1
+
+        &:nth-child(2)
+
+            @media ($max-md)
+                order: 2
+        
+        &:nth-child(3)
+
+            @media ($max-md)
+                order: 4
+        
+        &:nth-child(4)
+
+            @media ($max-md)
+                order: 3
+    
+    &__title
+        margin: 0 0 15px
+        font-size: 35px
+        font-weight: 800
+        line-height: 1.25
+        text-transform: uppercase
+        color: var(--blue)
+
+        @media ($max-lg)
+            font-size: 30px
+
+        @media ($max-md)
+            font-size: 25px
+    
+        &--visible-md
+            display: none
+
+            @media ($max-md)
+                display: block
+
+        &--hidden-md
+    
+            @media ($max-md)
+                display: none
+
+    &__picture
+        display: flex
+        justify-content: center
+    
+    &__img
+        max-width: 100%
+        height: auto
+
+    &__text
+        font-size: 18px
+
+        @media ($max-md)
+            font-size: 16px
+
+        &:not(:last-child)
+            margin-bottom: 35px
+
+            @media ($max-md)
+                margin-bottom: 25px
+
+        h3
+            margin: 0 0 .5rem
+            color: var(--blue)
+            font-size: 18px
+            font-weight: 700
+
+            @media ($max-md)
+                font-size: 16px
+
+        p
+
+            &:last-child
+                margin-bottom: 0
+
+        ul
+            padding: 0
+            margin: 0 0 1rem
+            list-style: none
+
+        &--mb-150
+
+            &:not(:last-child)
+                margin-bottom: 150px
+
+                @media ($max-md)
+                    margin-bottom: 20px
+
+    &__button
+        
+        @media ($max-md)
+            width: 100%

@@ -1,0 +1,52 @@
+section.contacts-section
+    picture.contacts-section__bg
+        source(srcset="img/contacts-bg-mob@2x.webp 2x, img/contacts-bg-mob.webp" width="320" height="581" media="(max-width: 767.98px)")
+        img.contacts-section__bg-img(src="img/contacts-bg.webp" srcset="img/contacts-bg@2x.webp 2x" loading="lazy" width="1920" height="581"  alt="alt")
+
+    .container.contacts-section__container
+        h2.section-title.contacts-section__title Contacts
+
+        .contacts-section__descr
+            p Civil Engineer with specialisation in building envelope. 
+            p Metal construction designer with federal certificate of proficiency.
+        
+        ul.contact-list
+            li.contact-list__item
+                svg.contact-list__icon(width="59" height="59")
+                    use(xlink:href="img/sprite.svg#phone")
+                
+                p.contact-list__text
+                    a.contact-list__link(href="tel:+41767478840") +41 76 747 88 40
+            
+            li.contact-list__item
+                svg.contact-list__icon(width="59" height="59")
+                    use(xlink:href="img/sprite.svg#email")
+                
+                p.contact-list__text
+                    a.contact-list__link(href="mailto:tech@cs-constructions.ch") tech@cs-constructions.ch
+            
+            li.contact-list__item
+                svg.contact-list__icon(width="59" height="59")
+                    use(xlink:href="img/sprite.svg#number")
+                
+                p.contact-list__text Enterprise Identification Number: CHE-493.519.042
+
+        address.social.contacts-section__social
+            ul.social__list
+                li.social__item
+                    a.social__link(href="#")
+                        svg.social__icon(width="21" height="21")
+                            use(xlink:href="img/sprite.svg#whatsapp")
+
+                li.social__item
+                    a.social__link(href="#")
+                        svg.social__icon(width="15" height="15")
+                            use(xlink:href="img/sprite.svg#linkedin")
+                            
+        figure.contacts-section__figure
+            picture.contacts-section__picture
+                img.contacts-section__img(src="img/contacts-img.webp" srcset="img/contacts-img@2x.webp 2x" loading="lazy" width="415" height="598"  alt="alt")
+            
+            figcaption.contacts-section__figcaption
+                h3 Your contact person
+                    span C. Schwendimann

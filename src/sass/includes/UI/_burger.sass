@@ -1,0 +1,42 @@
+.burger
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 45px
+    min-width: 45px
+    height: 40px
+    padding: 5px
+    line-height: 1
+    gap: 6px
+    color: var(--blue)
+    border: 1px solid var(--blue)
+    border-right: none
+    border-radius: 10px 0 0 10px
+    transition: color .5s ease
+
+    &:hover,
+    &:active,
+    &:focus-visible
+
+        // .burger__line
+        //     background: var(--red-gradient)
+
+    &.is-active
+
+        .burger__line
+
+            &:nth-child(1)
+                transform: rotate(45deg) translate(6px, 6px)
+
+            &:nth-child(2)
+                opacity: 0
+
+            &:nth-child(3)
+                transform: rotate(-45deg) translate(5px, -5px)
+    
+    &__line
+        width: 22px
+        height: 2px
+        background: var(--blue)
+        transition: all .5s ease

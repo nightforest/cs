@@ -1,0 +1,39 @@
+.contacts
+
+    &__list
+        margin: 0
+        padding: 0
+        list-style: none
+        line-height: 1.4
+    
+    &__link
+        position: relative
+        font-size: 18px
+        font-weight: 500
+        font-style: normal
+        white-space: nowrap
+        color: var(--black)
+        transition: color .5s ease
+
+        @media (max-width: 1499.98px)
+            font-size: 16px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--blue)
+
+            &:before
+                transform: scaleX(1)
+
+        &:before
+            position: absolute
+            bottom: 0
+            left: 0
+            display: block
+            width: 100%
+            height: 1px
+            background-color: var(--blue)
+            transition: transform .5s ease
+            transform: scaleX(0)
+            content: ""

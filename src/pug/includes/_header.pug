@@ -1,0 +1,78 @@
+header.header
+    .alert.is-visible
+        p.alert__text In the next 7 days (08/01/2023-08/08/2023), i I will be unavailable. I bring my apologies.
+        button.alert__close(type="button" aria-label="Close alert")
+            svg.alert__close-icon(width="21" height="21")
+                use(xlink:href="img/sprite.svg#close")
+
+    .header__container
+        .logo.header__logo
+            a.logo__link(href="#" aria-label="logo")
+                img.logo__img(src="img/logo.svg" width="280" height="53" alt="logo")
+
+        nav.menu.header__menu
+            ul.menu__list
+                li.menu__item
+                    a.menu__link(href="#") Start Page
+
+                li.menu__item.is-dropdown
+                    a.menu__link.is-dropdown__toggle(href="#") Service
+                        svg.menu__arrow(width="16" height="17")
+                            use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                    ul.menu__sub.is-dropdown__menu
+                        li.menu__sub-item
+                            a.menu__sub-link(href="#") Service 1
+                        li.menu__sub-item
+                            a.menu__sub-link(href="#") Service 2
+                        li.menu__sub-item
+                            a.menu__sub-link(href="#") Service 3
+
+                li.menu__item
+                    a.menu__link(href="#") Reference projects
+
+                li.menu__item
+                    a.menu__link(href="#") Contact
+
+        address.contacts.header__contacts
+            ul.contacts__list
+                li.contacts__item
+                    a.contacts__link(href="tel:+41767478840") +41 76 747 88 40
+                
+                li.contacts__item
+                    a.contacts__link(href="mailto:tech@cs-constructions.ch") tech@cs-constructions.ch
+
+        .lang.lang--lg-small.header__lang
+            .lang__inner
+                button.lang__toggle(type="button" aria-label="Choose language") EN
+                    svg.lang__toggle-icon(width="16" height="17")
+                        use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                ul.lang__dropdown
+                    li.lang__item
+                        a.lang__link(href="#") DE
+
+        nav.actions.header__actions
+            ul.actions__list
+                li.actions__item.is-dropdown
+                    button.actions__button.is-dropdown__toggle(type="button" aria-label="Show phone")
+                        svg.actions__icon(width="22" height="22")
+                            use(xlink:href="img/sprite.svg#phone")
+
+                    .actions__dropdown.is-dropdown__menu
+                        h4.actions__title Phone number
+                        a.actions__link(href="tel:+41767478840") +41 76 747 88 40
+
+                li.actions__item.is-dropdown
+                    button.actions__button.is-dropdown__toggle(type="button" aria-label="Show phone")
+                        svg.actions__icon(width="22" height="22")
+                            use(xlink:href="img/sprite.svg#email")
+
+                    .actions__dropdown.is-dropdown__menu
+                        h4.actions__title E-mail
+                        a.actions__link(href="mailto:tech@cs-constructions.ch") tech@cs-constructions.ch
+
+        button.burger.header__burger(type="button" aria-label="Open mobile menu" aria-expanded="false" data-nav-toggle)
+            .burger__line
+            .burger__line
+            .burger__line

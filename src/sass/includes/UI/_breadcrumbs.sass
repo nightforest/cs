@@ -1,0 +1,49 @@
+.breadcrumbs
+
+    &__list
+        padding-left: 0
+        list-style: none
+        margin: 0
+        font-size: 0
+        text-align: center
+
+        @media ($max-md)
+            text-align: left
+
+    &__item
+        line-height: 1.2
+        position: relative
+        color: var(--white)
+        display: inline
+        font-weight: 700
+        font-size: 18px
+
+        @media ($max-md)
+            font-size: 14px
+
+        &:after
+            display: inline-flex
+            margin: 0 6px
+            font-weight: 400
+            content: '/'
+
+        &:last-child
+            margin-right: 0
+
+            &:after
+                display: none
+
+    &__link
+        position: relative
+        color: var(--white)
+        font-weight: 400
+        text-decoration: none
+        display: inline
+        transition: all .5s ease
+        border-bottom: 1px solid transparent
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--white)
+            border-bottom-color: var(--white)
