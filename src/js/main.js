@@ -6,14 +6,12 @@ import modal from './includes/modal.js';
 import langDropdown from './includes/langDropdown.js';
 import actionsDropdown from './includes/actionsDropdown.js';
 import isDropdown from './includes/isDropdown.js';
-import placeholder from './includes/placeholder.js';
 import validation from './includes/validation.js';
-import phoneInput from './includes/phoneInput.js';
-import schedule from './includes/schedule.js';
 import closeAlert from './includes/closeAlert.js';
 import projectsSlider from './includes/projectsSlider.js';
 import loadMore from './includes/loadMore.js';
 import productsSlider from './includes/productsSlider.js';
+import photoSwipe from './includes/photoSwipe.js';
 import '../sass/main.sass';
 
 
@@ -25,11 +23,9 @@ modal();
 langDropdown();
 actionsDropdown();
 isDropdown();
-placeholder();
 validation();
-phoneInput();
-schedule();
 closeAlert();
 projectsSlider();
 loadMore();
 productsSlider();
+photoSwipe();

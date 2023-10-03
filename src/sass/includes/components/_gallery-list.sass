@@ -1,0 +1,28 @@
+.gallery-list
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    gap: 50px
+    padding: 0 15px
+    margin: 0 auto
+    list-style: none
+    max-width: 1850px
+
+    @media ($max-xl)
+        gap: 30px
+
+    @media ($max-md)
+        gap: 15px
+
+    &__item
+        grid-column: 3 span
+
+        @media ($max-md)
+            grid-column: 6 span
+
+    &__picture
+        display: flex
+    
+    &__img
+        max-width: 100%
+        border-radius: 10px
+        height: auto

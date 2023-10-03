@@ -1,0 +1,43 @@
+.contact-us-section
+    position: relative
+    padding: 60px 0 90px
+
+    @media ($max-md)
+        padding: 30px 0
+
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        z-index: $z-index-minus
+
+        &-img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__container
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 30px
+
+        @media ($max-lg)
+            display: flex
+            flex-direction: column
+
+    &__left
+        grid-column: 7 span
+
+    &__right
+        grid-column: 5 span
+
+    &__form-wrap
+        background: #f3f3f3
+        border-radius: 10px
+        padding: 35px 45px 30px
+
+        @media ($max-md)
+            padding: 25px 20px 30px

@@ -1,12 +1,12 @@
 section.product-section
     .container.product-section__container
-        .product-section__col
+        .product-section__col.product-section__col--md-order-1
             h2.product-section__title.product-section__title--visible-md Façade and metal construction
             
             picture.product-section__picture
                 img.product-section__img(src="img/product-img-3.webp" srcset="img/product-img-3@2x.webp 2x" loading="lazy" width="529" height="457" alt="alt")
         
-        .product-section__col
+        .product-section__col.product-section__col--md-order-2
             h2.product-section__title.product-section__title--hidden-md Façade and metal construction
             
             .product-section__text
@@ -27,13 +27,13 @@ section.product-section
                     li Supervision of production and assembly processes
                     li Cooperation during completion and handover
         
-        .product-section__col
+        .product-section__col.product-section__col--md-order-4
             .product-section__text.product-section__text--mb-150
                 p Your 2D drawing or 3D model can be read directly into the statics software. By reading in a wide variety of formats such as DXF, DWG, IFC, STEP files and others, misunderstandings can be avoided and efficiency increased for everyone
             
-            a.button.product-section__button(href="#") Get a quote
+            a.button.product-section__button(href="#" data-modal="modal-quote") Get a quote
         
-        .product-section__col
+        .product-section__col.product-section__col--md-order-3
             .products-slider
                 .swiper.products-slider__swiper
                     .swiper-wrapper

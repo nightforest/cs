@@ -1,7 +1,7 @@
 import JustValidate from 'just-validate';
 
 const validation = () => {
-    if (document.getElementById('form') || document.getElementById('form-2')) {
+    if (document.getElementById('form')) {
         const validator = new JustValidate('#form', {
             errorLabelCssClass: ['error-label'],
         });
@@ -10,16 +10,7 @@ const validation = () => {
             validator.addField('#inputName', [
                 {
                     rule: 'required',
-                },
-            ]);
-    
-        document.getElementById('inputEmail') &&
-            validator.addField('#inputEmail', [
-                {
-                    rule: 'required',
-                },
-                {
-                    rule: 'email',
+                    errorMessage: "Required field",
                 },
             ]);
     
@@ -27,13 +18,7 @@ const validation = () => {
             validator.addField('#inputPhone', [
                 {
                     rule: 'required',
-                },
-            ]);
-    
-        document.getElementById('textarea') &&
-            validator.addField('#textarea', [
-                {
-                    rule: 'required',
+                    errorMessage: "Required field",
                 },
             ]);
     }

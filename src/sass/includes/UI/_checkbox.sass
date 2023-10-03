@@ -5,13 +5,13 @@
 
     &__label
         position: relative
-        display: block
-        font-size: 14px
-        line-height: 1.3
+        display: inline-block
+        font-size: 16px
+        line-height: 1.875
         font-weight: 500
-        color: var(--black)
+        color: #525252
         margin: 0
-        padding-left: 28px
+        padding-left: 36px
         cursor: pointer
         user-select: none
         transition: all .5s ease
@@ -20,28 +20,34 @@
             position: absolute
             top: 0
             left: 0
-            width: 18px
-            height: 18px
-            border: 1px solid var(--black)
-            background: none
-            border-radius: 50%
+            width: 30px
+            height: 30px
+            border: 1px solid #E7E7E7
+            background: var(--white)
+            border-radius: 5px
             transition: all .5s ease
             content: ""
         
         &::after
             position: absolute
-            top: 4px
-            left: 4px
-            width: 10px
-            height: 10px
-            background: var(--black)
-            border-radius: 50%
+            top: 0
+            left: 0
+            width: 30px
+            height: 30px
+            background: url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.6449 0.23573C17.067 0.591883 17.1204 1.22279 16.7643 1.64489L8.32679 11.6449C8.14541 11.8599 7.88189 11.9885 7.60083 11.9993C7.31977 12.0101 7.04716 11.902 6.84985 11.7015L0.287348 5.03487C-0.10009 4.64129 -0.0951041 4.00814 0.298483 3.6207C0.69207 3.23327 1.32522 3.23825 1.71265 3.63184L7.50561 9.51675L15.2357 0.355151C15.5919 -0.0669556 16.2228 -0.120422 16.6449 0.23573Z' fill='%2300419E'/%3E%3C/svg%3E%0A") no-repeat center center
+            border-radius: 0
             transition: all .25s ease
             content: ""
 
-        &:hover,
-        &:active
-            color: var(--brown)
+        > a
+            color: #525252
+            text-decoration: underline
+            transition: color .5s ease
+
+            &:hover,
+            &:active,
+            &:focus
+                color: var(--blue)
 
     &__input
         position: absolute
@@ -50,7 +56,7 @@
 
         // Checked
         &:checked + .checkbox__label::before
-            background: none
+            background: var(--white)
 
         &:checked + .checkbox__label::after
             opacity: 1
@@ -63,18 +69,18 @@
 
         // Hover
         &:not(:disabled):not(:checked) + .checkbox__label:hover::before
-            border-color: var(--brown)
+            border-color: var(--blue)
 
         // Active 
         &:not(:disabled):active + .checkbox__label::before
-            border-color: var(--brown)
+            border-color: var(--blue)
 
         // Focus 
         &:focus-visible + .checkbox__label::before
-            border-color: var(--brown)
+            border-color: var(--blue)
 
         &:focus-visible:not(:checked) + .checkbox__label::before
-            border-color: var(--brown)
+            border-color: var(--blue)
         
         // Disabled
         &:disabled

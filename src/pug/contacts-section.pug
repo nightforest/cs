@@ -4,13 +4,13 @@ section.contacts-section
         img.contacts-section__bg-img(src="img/contacts-bg.webp" srcset="img/contacts-bg@2x.webp 2x" loading="lazy" width="1920" height="581"  alt="alt")
 
     .container.contacts-section__container
-        h2.section-title.contacts-section__title Contacts
+        h2.section-title.contacts-section__title.animation-down Contacts
 
-        .contacts-section__descr
+        .contacts-section__descr.animation-down(data-delay="0.2")
             p Civil Engineer with specialisation in building envelope. 
             p Metal construction designer with federal certificate of proficiency.
         
-        ul.contact-list
+        ul.contact-list.animation-down(data-delay="0.4")
             li.contact-list__item
                 svg.contact-list__icon(width="59" height="59")
                     use(xlink:href="img/sprite.svg#phone")
@@ -31,7 +31,7 @@ section.contacts-section
                 
                 p.contact-list__text Enterprise Identification Number: CHE-493.519.042
 
-        address.social.contacts-section__social
+        address.social.contacts-section__social.animation-down(data-delay="0.6")
             ul.social__list
                 li.social__item
                     a.social__link(href="#")
@@ -47,6 +47,6 @@ section.contacts-section
             picture.contacts-section__picture
                 img.contacts-section__img(src="img/contacts-img.webp" srcset="img/contacts-img@2x.webp 2x" loading="lazy" width="415" height="598"  alt="alt")
             
-            figcaption.contacts-section__figcaption
+            figcaption.contacts-section__figcaption.animation-fade
                 h3 Your contact person
                     span C. Schwendimann

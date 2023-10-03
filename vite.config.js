@@ -15,6 +15,8 @@ export default defineConfig({
                 glass: resolve(__dirname, 'glass-structures.html'),
                 projects: resolve(__dirname, 'projects.html'),
                 steel: resolve(__dirname, 'steel-structures.html'),
+                metal: resolve(__dirname, 'metal-constructions.html'),
+                contacts: resolve(__dirname, 'contacts.html'),
             },
         },
     },

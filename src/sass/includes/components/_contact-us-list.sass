@@ -1,0 +1,82 @@
+.contact-us-list
+    display: grid
+    grid-template-columns: repeat(7, 1fr)
+    gap: 15px
+    padding: 0
+    margin: 0
+    list-style: none
+
+    @media ($max-md)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+
+    &__item
+        grid-column: 3 span
+        display: flex
+        align-items: flex-start
+        gap: 10px
+        width: 100%
+
+        @media ($max-md)
+            order: 1
+
+        &:nth-child(even)
+            grid-column: 4 span
+
+        &:nth-child(3)
+
+            @media ($max-md)
+                order: 2
+
+    &__icon
+        min-width: 26px
+        color: var(--blue)
+    
+    &__content
+
+        &--pl
+            padding-left: 36px
+
+            @media ($max-md)
+                display: flex
+                align-items: center
+                justify-content: space-between
+                width: 100%
+
+    &__title
+        margin: 0 0 10px
+        font-size: 18px
+        font-weight: 400
+        color: #525252
+
+    &__text
+        margin: 0
+        font-size: 22px
+        font-weight: 800
+        line-height: 1.25
+        color: var(--blue)
+
+    &__link
+        position: relative
+        color: var(--blue)
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--blue)
+
+            &:before
+                transform: scaleX(1)
+
+        &:before
+            position: absolute
+            bottom: 0
+            left: 0
+            display: block
+            width: 100%
+            height: 1px
+            background-color: var(--blue)
+            transition: transform .5s ease
+            transform: scaleX(0)
+            content: ""

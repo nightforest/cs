@@ -18,26 +18,46 @@
     &__col
         grid-column: 6 span
 
-        &:nth-child(1)
+        // &:nth-child(1)
+
+        //     @media ($max-md)
+        //         order: 1
+
+        // &:nth-child(2)
+
+        //     @media ($max-md)
+        //         order: 2
+        
+        // &:nth-child(3)
+
+        //     @media ($max-md)
+        //         order: 4
+        
+        // &:nth-child(4)
+
+        //     @media ($max-md)
+        //         order: 3
+
+        &--md-order-1
 
             @media ($max-md)
                 order: 1
 
-        &:nth-child(2)
+        &--md-order-2
 
             @media ($max-md)
                 order: 2
-        
-        &:nth-child(3)
 
-            @media ($max-md)
-                order: 4
-        
-        &:nth-child(4)
+        &--md-order-3
 
             @media ($max-md)
                 order: 3
-    
+
+        &--md-order-4
+
+            @media ($max-md)
+                order: 4
+
     &__title
         margin: 0 0 15px
         font-size: 35px

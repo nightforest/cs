@@ -4,16 +4,17 @@ section.top-section
         img.top-section__bg-img(src="img/top-bg.webp" srcset="img/top-bg@2x.webp 2x" loading="lazy" width="1920" height="748"  alt="alt")
         
     .container.top-section__container
-        h1.top-section__title Your Engineer 
+        h1.top-section__title.animation-down Your Engineer 
             span in façade
-        h2.top-section__sub-title & metal and steel constructions
+        h2.top-section__sub-title.animation-down(data-delay="0.2") & metal and steel constructions
 
-        .top-section__buttons
+        .top-section__buttons.animation-down(data-delay="0.4")
             a.button.top-section__button(href="#") Service
             a.button.button--outline.top-section__button(href="#") Reference projects
 
-        a.arrow-button.top-section__more(href="#")
-            .arrow-button__pic
-                svg.arrow-button__icon(width="16" height="17")
-                    use(xlink:href="img/sprite.svg#arrow-down")
-            | See more
+        .top-section__more-wrap.animation-down(data-delay="0.6")
+            a.arrow-button.top-section__more(href="#")
+                .arrow-button__pic
+                    svg.arrow-button__icon(width="16" height="17")
+                        use(xlink:href="img/sprite.svg#arrow-down")
+                | See more

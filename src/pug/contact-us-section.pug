@@ -1,0 +1,86 @@
+section.contact-us-section
+    picture.contact-us-section__bg
+        img.contact-us-section__bg-img(src="img/contact-us-bg.webp" srcset="img/contact-us-bg@2x.webp 2x" loading="lazy" width="1920" height="838"  alt="alt")
+
+    .container.contact-us-section__container
+        .contact-us-section__left
+            ul.contact-us-list.animation-down
+                li.contact-us-list__item
+                    svg.contact-us-list__icon(width="26" height="26")
+                        use(xlink:href="img/sprite.svg#phone")
+                    
+                    .contact-us-list__content
+                        h3.contact-us-list__title Phone number:
+                        p.contact-us-list__text
+                            a.contact-us-list__link(href="tel:+41767478840") +41 76 747 88 40
+                
+                li.contact-us-list__item
+                    svg.contact-us-list__icon(width="26" height="26")
+                        use(xlink:href="img/sprite.svg#email")
+                    
+                    .contact-us-list__content
+                        h3.contact-us-list__title E-mail:
+                        p.contact-us-list__text
+                            a.contact-us-list__link(href="mailto:tech@cs-constructions.ch") tech@cs-constructions.ch
+                
+                li.contact-us-list__item
+                    .contact-us-list__content.contact-us-list__content--pl
+                        h3.contact-us-list__title Follow us
+                        address.social.contact-us-list__social
+                            ul.social__list
+                                li.social__item
+                                    a.social__link.social__link--blue(href="#")
+                                        svg.social__icon(width="21" height="21")
+                                            use(xlink:href="img/sprite.svg#whatsapp")
+
+                                li.social__item
+                                    a.social__link.social__link--blue(href="#")
+                                        svg.social__icon(width="15" height="15")
+                                            use(xlink:href="img/sprite.svg#linkedin")
+
+                li.contact-us-list__item
+                    svg.contact-us-list__icon(width="26" height="26")
+                        use(xlink:href="img/sprite.svg#number")
+                    
+                    .contact-us-list__content
+                        h3.contact-us-list__title Enterprise Identification Number:
+                        p.contact-us-list__text CHE-493.519.042
+
+            .contact-person.animation-down
+                .contact-person__text
+                    p Civil Engineer with specialisation in building envelope.
+                    p Metal construction designer with federal certificate of proficiency.
+
+                figure.contact-person__figure
+                    picture.contact-person__picture
+                        img.contact-person__img(src="img/contact-us-img.webp" srcset="img/contact-us-img@2x.webp 2x" loading="lazy" width="240" height="345"  alt="alt")
+                    
+                    figcaption.contact-person__figcaption
+                        h3 Your contact person
+                            span C. Schwendimann
+
+        .contact-us-section__right
+            .contact-us-section__form-wrap
+                form.form(id="form" autocomplete="off" novalidate="novalidate")
+                    h3.form__title Contact us
+
+                    .form__group
+                        input#inputName.input.form__input(type="text" name="inputFirstName" placeholder="Name*" autocomplete="off" required)
+                    
+                    .form__group
+                        input#inputPhone.input.form__input(type="text" name="inputPhone" placeholder="Phone (what'sapp)*" autocomplete="off" required)
+                    
+                    .form__group
+                        input#inputEmail.input.form__input(type="email" name="inputEmail" placeholder="Email" autocomplete="off")
+
+                    .form__group
+                        textarea#textarea.textarea.form__input(name="message" rows="4" placeholder="Comment" autocomplete="off" required)
+
+                    .form__group.form__group--center
+                        .checkbox
+                            input.checkbox__input#checkbox(type="checkbox" name="checkbox" value="true" checked required)
+                            label.checkbox__label(for="checkbox") I agree to the 
+                                a.black-link(href="#") Privacy Policy
+
+                    .form__button-group
+                        button.button.form__button Submit

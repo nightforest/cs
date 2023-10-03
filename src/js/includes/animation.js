@@ -10,31 +10,6 @@ const animation = () => {
         animationTime: 600,
     });
 
-    // const tl = gsap.timeline();
-
-    // tl.set(".preloader__img", {
-    //     display: "block",
-    // });
-    // tl.from(".preloader__img", 1, {
-    //     opacity: 0,
-    //     ease: "expo.inOut",
-    // });
-    // tl.to(".preloader", 1, {
-    //     yPercent: -100,
-    //     ease: "expo.inOut",
-    // });
-    // tl.set(".preloader", {
-    //     display: "none",
-    //     onComplete: startScrollTrigger,
-    // });
-    // tl.set(".header",{clearProps:"transition"});
-	// tl.from(".header", 1, {
-	// 	opacity: 0,
-	// 	y: -200,
-	// 	ease: "expo.easeInOut"
-	// });
-
-
     // function startScrollTrigger() {
         gsap.utils.toArray('.animation-fade').forEach(function(animatedElement) {
             const delay = animatedElement.getAttribute('data-delay') ? animatedElement.getAttribute('data-delay') : 0;
